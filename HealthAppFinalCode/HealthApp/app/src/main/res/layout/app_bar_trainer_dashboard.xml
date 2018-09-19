@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="health.app.Activities.TrainerDashboardActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_above="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:background="#FFFFFF"
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <include layout="@layout/toolbar_dashboard" />
+        </LinearLayout>
+        <View
+            android:id="@+id/view"
+            android:background="#858585"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                layout="@layout/content_trainer_dashboard"
+                android:id="@+id/flContent1" />
+        </RelativeLayout>
+        <!--<android.support.v7.widget.Toolbar-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="?attr/colorPrimary"-->
+        <!--app:popupTheme="@style/AppTheme.PopupOverlay" />-->
+
+
+    </android.support.design.widget.AppBarLayout>
+    <!--<include layout="@layout/dashboard_layout" />-->
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        android:background="#F5F5F5"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/bottom_item_color"
+        app:itemTextColor="@color/bottom_item_color"
+        app:menu="@menu/trainer_bottom_menu"/>
+    <!--<include layout="@layout/content_dashboard" />-->
+</RelativeLayout>
+

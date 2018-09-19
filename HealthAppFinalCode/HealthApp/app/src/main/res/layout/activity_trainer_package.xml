@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="health.app.Activities.TrainerPackageActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/no_request"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/request"
+            android:src="@drawable/no_pckg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/request"
+            android:textColor="@color/black"
+            android:text="There are no packages right now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="10dp"
+        android:clipToPadding="false"
+        android:id="@+id/package_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="@color/white"
+    tools:context="health.app.Activities.RegisterOneActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="100dp"
+                android:id="@+id/upload_img"
+                android:layout_marginTop="10dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/text_light_gray"
+                    android:layout_gravity="center"
+                    android:src="@drawable/usern"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/upload_image_icon"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:layout_gravity="bottom|right"
+                    android:src="@mipmap/uploadicon2x"
+                    android:gravity="center" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/get_started"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/MyTextInputLayout"
+                android:layout_marginTop="20dp"
+                android:id="@+id/input_layout_fname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:inputType="textPersonName"
+                    android:id="@+id/input_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/FirstName"
+                    android:textSize="15sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/MyTextInputLayout"
+                android:id="@+id/input_layout_lname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:inputType="textPersonName"
+                    android:id="@+id/input_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/LastName"
+                    android:textSize="15sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/MyTextInputLayout"
+                android:id="@+id/input_layout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:inputType="text"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:drawableRight="@mipmap/genderselection2x"
+                    android:textSize="15sp"
+                    android:id="@+id/input_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/gender" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/MyTextInputLayout"
+                android:id="@+id/input_layout_phoneno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:inputType="phone"
+                    android:textSize="15sp"
+                    android:id="@+id/input_phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number (Optional)" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/MyTextInputLayout"
+                android:id="@+id/input_layout_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:id="@+id/input_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/age" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/MyTextInputLayout"
+                android:id="@+id/input_layout_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:inputType="number|numberDecimal"
+                    android:textSize="15sp"
+                    android:id="@+id/input_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/WeightOpn" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:theme="@style/MyTextInputLayout"
+                android:id="@+id/input_layout_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:inputType="number|numberDecimal"
+                    android:textSize="15sp"
+                    android:id="@+id/input_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/HeightOpn" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/bt_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bt_backgound"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

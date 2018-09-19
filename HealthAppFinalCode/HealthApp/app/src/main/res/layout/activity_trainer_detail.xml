@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="health.app.Activities.TrainerDetailByIdActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view1"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                app:civ_border_width="4dp"
+                android:src="@drawable/usern"
+                app:civ_border_color="@color/gray"
+                android:id="@+id/iv_customer"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+        </RelativeLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/f1"
+                    android:text="Full Name :"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/f1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:id="@+id/fname"
+                    android:text="@string/Full_Name"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </RelativeLayout>
+<RelativeLayout
+    android:layout_marginTop="5dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email Address :"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/textView5"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:id="@+id/email_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_txt"
+                    android:textSize="16sp" />
+</RelativeLayout>
+
+            </LinearLayout>
+
+
+
+    <LinearLayout
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:id="@+id/i1"
+                android:src="@drawable/type_icon2x"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/i1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/TypeOfTraining"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/training_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TypeOfTraining"
+            android:textSize="15sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+        </View>
+
+        <RelativeLayout
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:id="@+id/i2"
+                android:src="@drawable/phone_icon2x"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/i2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+    <TextView
+        android:text="@string/phone"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/phone_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+123456789"
+        android:textSize="15sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+        </View>
+        <RelativeLayout
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:id="@+id/i4"
+                android:src="@drawable/age_icon2x"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/i4"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="@string/age"
+                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:id="@+id/age"
+                    android:text="@string/age"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+        </View>
+
+        <RelativeLayout
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:id="@+id/i3"
+                android:src="@drawable/bio_icon2x"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/i3"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/Bio"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/bio"
+            android:text="@string/Bio"
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:scrollbars="none"
+                android:nestedScrollingEnabled="false"
+                android:id="@+id/package_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#045EDB"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/year"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/month"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <include layout="@layout/toolbar_buttons"></include>
+                </LinearLayout>
+
+                <com.github.sundeepk.compactcalendarview.CompactCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/compactcalendar_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:padding="10dp"
+                    app:compactCalendarCurrentSelectedDayIndicatorStyle="fill_large_indicator"
+                    app:compactCalendarCurrentSelectedDayBackgroundColor="@color/colorAccent"
+                    app:compactCalendarCurrentDayTextColor="@color/white"
+                    app:compactCalendarCurrentSelectedDayTextColor="@color/white"
+                    app:compactCalendarBackgroundColor="#FAFAFA"
+                    app:compactCalendarCurrentDayBackgroundColor="@color/blue"
+                    app:compactCalendarMultiEventIndicatorColor="@color/colorAccent"
+                    app:compactCalendarTextColor="@color/black"
+                    app:compactCalendarTextSize="14sp" />
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#858585" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/calender_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#858585" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

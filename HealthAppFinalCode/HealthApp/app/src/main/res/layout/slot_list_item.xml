@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:id="@+id/tv_one"
+            android:background="#68AACE"
+            android:layout_width="10dp"
+            android:layout_height="70dp" />
+
+        <TextView
+            android:textSize="12sp"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/black"
+            android:text="10:30-11:30"
+            android:layout_toRightOf="@+id/tv_one"
+            android:id="@+id/tv_time"
+            android:background="#9BD1ED"
+            android:layout_width="100dp"
+            android:layout_height="70dp" />
+
+        <RelativeLayout
+            android:id="@+id/cell"
+            android:background="#E6F2F7"
+            android:padding="10dp"
+            android:layout_toRightOf="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="14sp"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/tv_trainer_name"
+                android:textColor="@color/black"
+                android:text="ios trainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user"
+                android:layout_centerVertical="true"
+                android:src="@drawable/usern"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/tv_trainer_name"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <CheckBox
+                android:id="@+id/iv_check"
+                android:button="@drawable/check_box_selector"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/container"
+    xmlns:aigestudio="http://schemas.android.com/apk/res-auto"
+    tools:context="health.app.AddPackage.AddDurationActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/view"
+            android:layout_above="@+id/bt_next"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:orientation="vertical"
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:text="Select Session Length"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_above="@+id/wheel"
+                android:layout_below="@+id/header"
+                android:id="@+id/main"
+                android:background="@drawable/session_2x"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Just click on icon you can choose length of your session."
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_select_duration"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/session_icon_time2x"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp" />
+
+                    <TextView
+                        android:id="@+id/tv_select_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Select Session Length"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="@color/white"
+                android:visibility="gone"
+                android:id="@+id/wheel"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:id="@+id/cancel"
+                            android:padding="10dp"
+                            android:text="Cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/done"
+                            android:textSize="16sp"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Done"
+                            android:layout_toRightOf="@+id/cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.aigestudio.wheelpicker.WheelPicker
+                            android:id="@+id/main_wheel_left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            aigestudio:wheel_atmospheric="true"
+                            aigestudio:wheel_curved="true"
+                            aigestudio:wheel_cyclic="true"
+                            aigestudio:wheel_item_align="center"
+                            aigestudio:wheel_item_text_color="@color/black"
+                            aigestudio:wheel_item_text_size="16sp"
+                            aigestudio:wheel_selected_item_text_color="@color/colorAccent" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.aigestudio.wheelpicker.WheelPicker
+                            android:id="@+id/main_wheel_center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            aigestudio:wheel_atmospheric="true"
+                            aigestudio:wheel_curved="true"
+                            aigestudio:wheel_cyclic="true"
+                            aigestudio:wheel_item_align="center"
+                            aigestudio:wheel_item_text_color="@color/black"
+                            aigestudio:wheel_item_text_size="16sp"
+                            aigestudio:wheel_selected_item_text_color="@color/colorAccent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+   <Button
+       android:textColor="@color/white"
+       android:text="NEXT>>"
+       android:id="@+id/bt_next"
+       android:layout_alignParentBottom="true"
+       android:background="@color/colorAccent"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
+
+</RelativeLayout>

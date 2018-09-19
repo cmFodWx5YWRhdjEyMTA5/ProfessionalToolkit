@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#045EDB"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/year"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/month"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:id="@+id/rl_tool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/tv_month_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+                <health.app.CalenderCount.CalendarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#fff"
+                    app:calendar_content_view_id="@+id/linearView">
+                    <health.app.CalenderCount.CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        app:current_day_text_color="#4da6ff"
+                        app:current_month_text_color="#333333"
+                        app:current_month_lunar_text_color="#FFFFFF"
+                        app:min_year="2000"
+                        app:day_text_size="12sp"
+                        app:lunar_text_size="0dp"
+                        app:other_month_lunar_text_color="@color/gray"
+                        app:other_month_text_color="@color/gray"
+                        app:scheme_lunar_text_color="#FFFFFF"
+                        app:scheme_text="1"
+                        app:calendar_card_view="health.app.CalenderCount.CalendarCardView"
+                        app:scheme_text_color="#333"
+                        app:scheme_theme_color="#128c4b"
+                        app:selected_lunar_text_color="#FFFFFF"
+                        app:selected_text_color="#333"
+                        app:selected_theme_color="#108cd4"
+                        app:week_background="#fff"
+                        app:week_text_color="#111" />
+                </health.app.CalenderCount.CalendarLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/text_light_gray">
+            </View>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rl_measurement"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/iv_measurement"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/mea_icon2x"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:text="Measurement Graph"
+                        android:layout_toRightOf="@+id/iv_measurement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/text_light_gray">
+                </View>
+                <RelativeLayout
+                    android:id="@+id/rl_findTrainer"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/iv_findTrainer"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/find_trainericon2x"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:text="Find Trainer"
+                        android:layout_toRightOf="@+id/iv_findTrainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/text_light_gray">
+                </View>
+                <RelativeLayout
+                    android:id="@+id/rl_messages"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/iv_messages"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/message_icon2x"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp" />
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16sp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:text="Messages"
+                        android:layout_toRightOf="@+id/iv_messages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/text_light_gray">
+                </View>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

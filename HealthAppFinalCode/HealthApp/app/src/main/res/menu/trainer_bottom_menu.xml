@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_item1"
+        android:icon="@drawable/dash"
+        android:title="Dashboard"/>
+    <item
+        android:id="@+id/action_item2"
+        android:icon="@drawable/community2x"
+        android:title="@string/complete"/>
+    <item
+        android:id="@+id/action_item3"
+        android:icon="@drawable/trainer_2x"
+        android:title="My Client"/>
+    <item
+        android:id="@+id/action_item4"
+        android:icon="@mipmap/reports"
+        android:title="Reports"/>
+</menu>

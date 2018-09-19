@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_logout"
+    android:background="@color/colorAccent"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_logout"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logout_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp" />
+
+        <TextView
+            android:textAllCaps="true"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_logout"
+            android:id="@+id/sign_in_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Logout"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

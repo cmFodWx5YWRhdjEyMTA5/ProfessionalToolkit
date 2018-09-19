@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    tools:context="health.app.Activities.TrainerCalenderActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:mcv_calendarMode="month"
+        app:mcv_selectionColor="@color/navy"
+        app:mcv_leftArrowMask="@mipmap/calendarback2x"
+        app:mcv_arrowColor="@color/black"
+        app:mcv_weekDayLabels="@color/black"
+        app:mcv_monthLabels="@color/black"
+        app:mcv_rightArrowMask="@mipmap/calendarforward2x"
+        app:mcv_headerTextAppearance="@color/black"
+        />
+
+
+</LinearLayout>

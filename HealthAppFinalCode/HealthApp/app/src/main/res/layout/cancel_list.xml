@@ -1,0 +1,100 @@
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp">
+
+
+
+    <LinearLayout
+        android:gravity="center|center_vertical"
+        android:background="#FA0000"
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:padding="10dp"
+            android:textSize="13sp"
+            android:id="@+id/tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel Session"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_start_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="yoga training"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:textColor="#FB0009"
+                        android:id="@+id/tv_location1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Swipe left to cancel this session"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:textColor="#0A3EBD"
+                        android:id="@+id/tv_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tap Here To View More"
+                        android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:textSize="13sp"
+                        android:textAllCaps="false"
+                        android:id="@+id/bt_status"
+                        android:background="@color/colorAccent"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <View
+            android:layout_below="@+id/main"
+            android:background="@color/text_light_gray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp">
+        </View>
+    </RelativeLayout>
+</com.daimajia.swipe.SwipeLayout>
+
+

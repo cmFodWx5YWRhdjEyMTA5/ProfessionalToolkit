@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="@color/white"
+    tools:context="health.app.Activities.MySessionCalenderActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="#045EDB"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/package_label"
+                    android:textSize="18sp"
+                    android:text="PACKAGE DETAILS"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_session_per_day"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_session_price"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_session_duration"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/r1"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/et_background"
+                    android:orientation="horizontal">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/sp_month"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        app:hintText="@string/SelectMonth">
+                    </com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/genderselection2x" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/et_background"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusable="true"
+                    android:orientation="horizontal">
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/sp_year"
+                        android:layout_width="145dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        app:hintText="@string/SelectYear">
+                    </com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:src="@mipmap/genderselection2x" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#045EDB"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/year"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/month"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:id="@+id/rl_tool"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/tv_month_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+                <health.app.CalenderCount.CalendarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#fff"
+                    app:calendar_content_view_id="@+id/linearView">
+                    <health.app.CalenderCount.CalendarView
+                        android:id="@+id/calendarView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        app:current_day_text_color="#4da6ff"
+                        app:current_month_text_color="#333333"
+                        app:current_month_lunar_text_color="#FFFFFF"
+                        app:min_year="2000"
+                        app:day_text_size="12sp"
+                        app:lunar_text_size="0dp"
+                        app:scheme_lunar_text_color="#FFFFFF"
+                        app:other_month_text_color="@color/gray"
+                        app:scheme_text="1"
+                        app:calendar_card_view="health.app.CalenderCount.CalendarCardView"
+                        app:scheme_text_color="#333"
+                        app:scheme_theme_color="#128c4b"
+                        app:selected_lunar_text_color="#FFFFFF"
+                        app:selected_text_color="#333"
+                        app:selected_theme_color="#108cd4"
+                        app:week_background="#fff"
+                        app:week_text_color="#111" />
+                </health.app.CalenderCount.CalendarLayout>
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#858585" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/calender_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/no_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/request"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/requests" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/request"
+                    android:layout_marginTop="10dp"
+                    android:text="There are no events yet."
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#858585" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+</LinearLayout>

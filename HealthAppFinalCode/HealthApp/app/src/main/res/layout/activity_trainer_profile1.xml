@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="health.app.Activities.TrainerProfile1Activity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar_progressbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:background="#FAFAFA"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <FrameLayout
+
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="100dp"
+                    android:id="@+id/upload_img"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/text_light_gray"
+                        android:layout_gravity="center"
+                        android:src="@drawable/usern"
+                        android:gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/upload_image_icon"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:layout_gravity="bottom|right"
+                        android:src="@mipmap/uploadicon2x"
+                        android:gravity="center" />
+
+                </FrameLayout>
+
+               <RelativeLayout
+                   android:padding="10dp"
+                   android:gravity="center"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/title"
+                       android:textColor="@color/black"
+                       android:textSize="16sp"
+                       android:text="Trainer ID :"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+                   <TextView
+                       android:layout_toRightOf="@+id/title"
+                       android:id="@+id/tv_trainerId"
+                       android:textColor="@color/black"
+                       android:textSize="16sp"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content" />
+               </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:theme="@style/MyTextInputLayout"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/input_layout_fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:inputType="textPersonName"
+                        android:id="@+id/input_first_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/FirstName"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+                <android.support.design.widget.TextInputLayout
+                    android:theme="@style/MyTextInputLayout"
+                    android:id="@+id/input_layout_lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:inputType="textPersonName"
+                        android:id="@+id/input_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/LastName"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:theme="@style/MyTextInputLayout"
+                    android:id="@+id/input_layout_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email_txt"
+                        android:inputType="textEmailAddress"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:theme="@style/MyTextInputLayout"
+                    android:id="@+id/input_layout_phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_phoneno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone"
+                        android:inputType="phone"
+                        android:maxLength="10"
+                        android:textSize="15sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:theme="@style/MyTextInputLayout"
+                    android:id="@+id/input_layout_training_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:drawableRight="@mipmap/genderselection2x"
+                        android:clickable="true"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:inputType="text"
+                        android:textSize="15sp"
+                        android:id="@+id/input_training_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/TypeOfTraining" />
+
+                </android.support.design.widget.TextInputLayout>
+                <!--<RelativeLayout-->
+                    <!--android:visibility="gone"-->
+                    <!--android:id="@+id/rl_training"-->
+                    <!--android:layout_marginTop="@dimen/common_5_dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/type"-->
+                        <!--android:text="Type Of Training"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                <!--<health.app.Utilities.MultiSelectSpinner-->
+                    <!--android:visibility="gone"-->
+                    <!--android:layout_below="@+id/type"-->
+                    <!--android:id="@+id/et_gender"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+                <!--</health.app.Utilities.MultiSelectSpinner>-->
+                    <!--<View-->
+                        <!--android:layout_marginTop="5dp"-->
+                        <!--android:layout_below="@+id/et_gender"-->
+                        <!--android:background="@color/text_light_gray"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/common_1_dp">-->
+                    <!--</View>-->
+                <!--</RelativeLayout>-->
+
+                <Button
+                    android:id="@+id/bt_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/bt_backgound"
+                    android:text="@string/next"
+                    android:textAllCaps="true"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <health.app.Utilities.MultiSpinner
+                app:theme="@style/AppCompatAlertDialogStyle"
+                android:visibility="gone"
+                android:id="@+id/multiselectSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:background="@null">
+            </health.app.Utilities.MultiSpinner>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

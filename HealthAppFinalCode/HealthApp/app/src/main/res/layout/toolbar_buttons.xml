@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#FAFAFA"
+    android:minHeight="?attr/actionBarSize"
+    app:theme="@style/ThemeOverlay.AppCompat.ActionBar" >
+    <RelativeLayout
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/previous"
+            android:layout_width="60dp"
+            android:layout_height="50dp">
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:tint="@color/black"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/calendarback2x"
+            android:layout_width="22dp"
+            android:layout_height="22dp" />
+
+        </RelativeLayout>
+
+    <TextView
+        android:layout_centerInParent="true"
+        android:id="@+id/text_view_toolbar1"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_alignParentRight="true"
+        android:id="@+id/next"
+        android:layout_width="60dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:tint="@color/black"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/calendarforward2x"
+            android:layout_width="22dp"
+            android:layout_height="22dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

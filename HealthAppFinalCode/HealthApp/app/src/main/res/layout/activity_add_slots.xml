@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    xmlns:aigestudio="http://schemas.android.com/apk/res-auto"
+    tools:context="health.app.AddPackage.AddSlotsActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:padding="5dp"
+        android:id="@+id/status_bar"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="5dp"
+            android:id="@+id/ll_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/tabs_background">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01:00:00"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/ll_slots"
+            android:background="@drawable/tab_gray"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/slot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/ll_days"
+            android:background="@drawable/tab_gray"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/ll_amount"
+            android:background="@drawable/tab_gray"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/amount"
+                android:textColor="@color/white"
+                android:text="N/A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/status_bar"
+        android:layout_above="@+id/bt_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:orientation="vertical"
+            android:background="@color/colorAccent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="Add Number Of Session Count In One Day"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_above="@+id/wheel"
+            android:layout_below="@+id/header"
+            android:background="@drawable/number_bg_2x"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="16sp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Just click on an icon you can choose session count according to your session length."
+                android:textColor="@color/black"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_select_number"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/no_2x"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:id="@+id/tv_select_number"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="Select Number Of Session Count In One Day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:visibility="gone"
+            android:id="@+id/wheel"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:id="@+id/cancel"
+                        android:padding="10dp"
+                        android:text="Cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:textColor="@color/black"
+                        android:id="@+id/done"
+                        android:textSize="16sp"
+                        android:paddingTop="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Done"
+                        android:layout_toRightOf="@+id/cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.aigestudio.wheelpicker.WheelPicker
+                        android:id="@+id/main_wheel_left"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        aigestudio:wheel_atmospheric="true"
+                        aigestudio:wheel_curved="true"
+                        aigestudio:wheel_cyclic="true"
+                        aigestudio:wheel_item_align="center"
+                        aigestudio:wheel_item_text_color="@color/black"
+                        aigestudio:wheel_item_text_size="16sp"
+                        aigestudio:wheel_selected_item_text_color="@color/colorAccent" />
+
+                </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+    <Button
+        android:textColor="@color/white"
+        android:text="NEXT>>"
+        android:id="@+id/bt_next"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

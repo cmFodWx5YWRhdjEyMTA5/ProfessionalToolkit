@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="health.app.Activities.MeasurementDetailsActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/body_width2x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="Weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvWeight"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="23 Kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:background="@color/gray"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent">
+                    </View>
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/body_height_2x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="Height"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvHeight"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="23 Kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:background="@color/gray"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent">
+                    </View>
+
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp">
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/waist_icon2x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/t3"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="Waist"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvWaist"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="23 Kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:background="@color/gray"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent">
+                    </View>
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/bodywidth2x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/t4"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="Calf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvCalf"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="23 Kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:background="@color/gray"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent">
+                    </View>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp">
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/thighbodywidth2x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/t5"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="Thigh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvThigh"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="23 Kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:background="@color/gray"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent">
+                    </View>
+                    <LinearLayout
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/armbodywidth2x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/t6"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="Arm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvArm"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="23 Kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:background="@color/gray"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent">
+                    </View>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp">
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/hip_icon2x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/t9"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="Hip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvHip"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="23 Kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                    <View
+                        android:background="@color/gray"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent">
+                    </View>
+                <LinearLayout
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:src="@drawable/chestbodywidth2x"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+
+                    <TextView
+                        android:id="@+id/t8"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:text="Chest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvChest"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/black"
+                        android:text="23 Kg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp">
+            </View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/body_fat_2x"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp" />
+
+                        <TextView
+                            android:id="@+id/t10"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="BMI"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvBMI"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/black"
+                            android:text="23 Kg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <View
+                android:background="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp">
+            </View>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

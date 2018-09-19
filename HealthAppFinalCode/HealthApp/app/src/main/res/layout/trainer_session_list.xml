@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/date_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="30sp"
+                android:text="22"
+                android:textColor="@color/black"
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="28sp"
+                android:text="SEP"
+                android:textColor="@color/black"
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="26sp"
+                android:text="2020"
+                android:textColor="@color/black"
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="2020"
+                android:textColor="@color/black"
+                android:id="@+id/tv_session_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="2020"
+                android:textColor="@color/black"
+                android:id="@+id/tv_session_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="2020"
+                android:textColor="@color/black"
+                android:id="@+id/tv_session_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="2020"
+                android:textColor="@color/black"
+                android:id="@+id/tv_session_start_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="14sp"
+                android:text="2020"
+                android:textColor="@color/black"
+                android:id="@+id/tv_session_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_profile"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/civ_profile"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:textSize="14sp"
+                    android:text="ios trainer"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_phone"
+                    android:textSize="14sp"
+                    android:text="1234567890"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_price"
+                    android:textSize="14sp"
+                    android:text="$ 100"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_bookedSession"
+                    android:textSize="14sp"
+                    android:text="$ 100"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/tv_leftSession"
+                    android:textSize="14sp"
+                    android:text="$ 100"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/rl_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_sun"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/gray_circle"
+                        android:gravity="center"
+                        android:text="SUN"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/tv_sun"
+                        android:background="@drawable/gray_circle"
+                        android:gravity="center"
+                        android:text="MON"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_tus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/tv_mon"
+                        android:background="@drawable/gray_circle"
+                        android:gravity="center"
+                        android:text="TUE"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_wed"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/tv_tus"
+                        android:background="@drawable/gray_circle"
+                        android:gravity="center"
+                        android:text="WED"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_thu"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/tv_wed"
+                        android:background="@drawable/gray_circle"
+                        android:gravity="center"
+                        android:text="THU"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fri"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/tv_thu"
+                        android:background="@drawable/gray_circle"
+                        android:gravity="center"
+                        android:text="FRI"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sat"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_toRightOf="@+id/tv_fri"
+                        android:background="@drawable/gray_circle"
+                        android:gravity="center"
+                        android:text="SAT"
+                        android:textColor="@color/white"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_below="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_light_gray">
+    </View>
+
+</RelativeLayout>

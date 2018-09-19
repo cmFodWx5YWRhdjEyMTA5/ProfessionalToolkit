@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="15dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:padding="15dp"
+            android:background="#F7F7F7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#101010"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_title1"
+                        android:text="Title: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/tv_title1"
+                        android:textColor="#101010"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_title"
+                        android:text="Personal Training,True Muscle Trainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#101010"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_description1"
+                        android:text="Description: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/tv_description1"
+                        android:textColor="#101010"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_description"
+                        android:text="Personal Training,True Muscle Trainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="#101010"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_location1"
+                        android:text="Location: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/tv_location1"
+                        android:textColor="#101010"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_location"
+                        android:text="New York"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#101010"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_time1"
+                        android:text="Time :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_toRightOf="@+id/tv_time1"
+                        android:textColor="#101010"
+                        android:textSize="14sp"
+                        android:id="@+id/tv_time"
+                        android:text="+12333334"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/bt_request"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bt_list_back"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:text=" SEND REQUEST "
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp" />
+                    <Button
+                        android:id="@+id/bt_requested"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bt_list_back"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        android:text=" REQUESTED "
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="right"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#101010"
+                    android:textSize="14sp"
+                    android:id="@+id/tv_date"
+                    android:text="28.8.17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

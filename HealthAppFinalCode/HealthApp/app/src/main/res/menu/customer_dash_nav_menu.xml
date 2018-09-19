@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/g1">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/myprofile"
+            android:title="My Profile" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/g2">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashicon"
+            android:title="@string/Dashboard" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/g3">
+        <item
+            android:id="@+id/nav_trainer"
+            android:icon="@drawable/community2x"
+            android:title="@string/MyTrainers" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/g4">
+        <item
+            android:id="@+id/nav_book"
+            android:icon="@drawable/calicon"
+            android:title="Book New Appointment" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/g5">
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/messicon"
+            android:title="@string/MyMessages" />
+</group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/g6">
+            <item
+                android:id="@+id/nav_notifications"
+                android:icon="@drawable/notification_2x"
+                android:title="@string/Notifications" />
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/g7">
+        <item
+            android:id="@+id/nav_changepwd"
+            android:icon="@drawable/passicon"
+            android:title="@string/ChangePassword" />
+    </group>
+    <group android:checkableBehavior="single"
+        android:id="@+id/g8" android:enabled="false" android:visible="true">
+        <item
+            android:id="@+id/nav_changepwd1"
+            android:title="" />
+    </group>
+</menu>

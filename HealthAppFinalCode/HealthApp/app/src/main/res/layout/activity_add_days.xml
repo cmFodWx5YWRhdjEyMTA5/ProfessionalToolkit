@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    tools:context="health.app.AddPackage.AddDaysActivity">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <include layout="@layout/toolbar" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_below="@+id/toolbar_layout"
+        android:background="#858585"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:padding="5dp"
+        android:id="@+id/status_bar"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="5dp"
+            android:id="@+id/ll_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/tabs_background">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/ll_slots"
+            android:background="@drawable/tab_yellow"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/slot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/ll_days"
+            android:background="@drawable/tab_red"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/ll_amount"
+            android:background="@drawable/tab_navy"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/amount"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/status_bar"
+        android:layout_above="@+id/ll_submit"
+        android:id="@+id/ll_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
+
+            <TextView
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Here you can uncheck those days when you do not want to give training to your clients."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <CheckBox
+                                android:id="@+id/cb_sun"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/day_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="SUNDAY"
+                                android:textColor="@color/white" />
+                            <LinearLayout
+                                android:id="@+id/ll_tick1"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:background="#2d9ebf"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp">
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/tick1"
+                                android:tint="@color/white"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/checkmark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="31dp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"></View>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <CheckBox
+                                android:id="@+id/cb_mon"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/day_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="MONDAY"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_tick2"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:background="#2d9ebf"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp">
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/tick2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:background="#004080"
+                                android:src="@drawable/checkmark"
+                                android:tint="@color/white" />
+                                </LinearLayout>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"></View>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <CheckBox
+                                android:id="@+id/cb_tus"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/day_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="TUESDAY"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_tick3"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:background="#2d9ebf"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp">
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/tick3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="31dp"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:background="#004080"
+                                    android:src="@drawable/checkmark"
+                                    android:tint="@color/white" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <CheckBox
+                                android:id="@+id/cb_wed"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/day_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="WEDNESDAY"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_tick4"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:background="#2d9ebf"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp">
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/tick4"
+                                android:tint="@color/white"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/checkmark"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp" />
+                                </LinearLayout>
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"></View>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <CheckBox
+                                android:id="@+id/cb_thu"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/day_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="THURSDAY"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_tick5"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:background="#2d9ebf"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp">
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/tick5"
+                                android:tint="@color/white"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/checkmark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="31dp" />
+</LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"></View>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <CheckBox
+                                android:id="@+id/cb_fri"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/day_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="FRIDAY"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_tick6"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:background="#2d9ebf"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp">
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/tick6"
+                                    android:tint="@color/white"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/checkmark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="31dp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <CheckBox
+                                android:id="@+id/cb_sat"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="@drawable/day_selector"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="SATURDAY"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_tick7"
+                                android:gravity="center"
+                                android:paddingBottom="10dp"
+                                android:background="#2d9ebf"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp">
+
+                            <ImageView
+                                android:visibility="gone"
+                                android:id="@+id/tick7"
+                                android:tint="@color/white"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/checkmark"
+                                android:layout_width="match_parent"
+                                android:layout_height="31dp" />
+</LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/white"></View>
+                        </LinearLayout>
+
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"></View>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:text="I Am Done!!!"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/bt_update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:text="I Am Done!!!"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

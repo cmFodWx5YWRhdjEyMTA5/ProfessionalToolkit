@@ -1,0 +1,30 @@
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:fitsSystemWindows="true"
+    android:background="@android:color/transparent"
+    android:minHeight="?attr/actionBarSize"
+    app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+    <TextView
+        android:id="@+id/text_view_toolbar"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
+        android:textColor="#FF7010"
+        android:textSize="18sp" />
+
+    <TextView
+        android:text="Send"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="right"
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</android.support.v7.widget.Toolbar>

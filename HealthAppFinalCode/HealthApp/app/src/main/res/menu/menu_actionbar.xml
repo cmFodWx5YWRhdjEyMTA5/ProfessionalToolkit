@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <!--  Toolbar ActionMode Menu Items  -->
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@mipmap/reddel"
+        android:orderInCategory="100"
+        android:title="Delete"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_copy"
+        android:icon="@mipmap/ic_launcher"
+        android:orderInCategory="100"
+        android:title="Copy"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_forward"
+        android:icon="@mipmap/backicon2x"
+        android:orderInCategory="100"
+        android:title="Forword"
+        app:showAsAction="always" />
+</menu>

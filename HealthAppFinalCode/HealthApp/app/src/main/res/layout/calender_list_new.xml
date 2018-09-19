@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp">
+
+        <LinearLayout
+            android:gravity="center"
+            android:padding="10dp"
+            android:id="@+id/date_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="30sp"
+                android:text="22"
+                android:textColor="@color/black"
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="28sp"
+                android:text="SEP"
+                android:textColor="@color/black"
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:textSize="26sp"
+                android:text="2020"
+                android:textColor="@color/black"
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/date_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/view1"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tab_background_selected">
+                </View>
+
+            </LinearLayout>
+
+            <ImageView
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/circle_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+
+            <LinearLayout
+                android:id="@+id/view2"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/tab_background_selected"></View>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="Session:"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_height1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_height1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="2020"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_height"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="Session Location:"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_weight1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_weight1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="2020"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="Start Time:"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_neck1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_neck1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="2020"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_neck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="Session Price:"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_waist1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_waist1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="2020"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_waist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="Status:"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_hip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tv_hip1"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:text="2020"
+                    android:textColor="@color/black"
+                    android:id="@+id/tv_hip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

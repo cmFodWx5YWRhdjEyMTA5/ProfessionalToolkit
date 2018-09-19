@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:visible="false"
+        android:id="@+id/message_close"
+        android:icon="@drawable/crossicon"
+        app:showAsAction="always"
+        android:title="Messages">
+    </item>
+    <item
+        android:visible="true"
+        android:id="@+id/message"
+        android:icon="@drawable/deleteicon"
+        app:showAsAction="always"
+        android:title="Messages">
+    </item>
+</menu>

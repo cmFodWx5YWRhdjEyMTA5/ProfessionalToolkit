@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/iv_profile"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_profile"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:id="@+id/tv_name"
+                android:text="Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_phone"
+                android:text="Phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/request"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:text="Request :"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tv_slot_date"
+                android:text="Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:id="@+id/tv_slot_time1"
+                    android:text="Time: "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_toRightOf="@+id/tv_slot_time1"
+                    android:id="@+id/tv_slot_time"
+                    android:text="Time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:id="@+id/tv_slot_location1"
+                    android:text="View More"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:textAllCaps="false"
+            android:id="@+id/bt_accept"
+            android:textColor="@color/white"
+            android:background="@color/colorAccent"
+            android:text="Accept"
+            android:layout_width="80dp"
+            android:layout_height="30dp" />
+
+            <Button
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:id="@+id/bt_reject"
+                android:textColor="@color/black"
+                android:background="#c6c6c7"
+                android:text="Reject"
+                android:layout_width="80dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="@color/text_light_gray">
+</View>
+</LinearLayout>

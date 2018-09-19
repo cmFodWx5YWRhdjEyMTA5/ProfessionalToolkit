@@ -1,0 +1,134 @@
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    swipe:leftEdgeSwipeOffset="0dp"
+    swipe:rightEdgeSwipeOffset="0dp">
+
+    <!--Bottom View For Right to Left-->
+
+    <LinearLayout
+        android:gravity="center|center_vertical"
+        android:background="#FA0000"
+        android:id="@+id/bottom_wrapper"
+        android:layout_width="100dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:adjustViewBounds="true"
+            android:src="@mipmap/delete2x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:textAllCaps="true"
+            android:textSize="13sp"
+            android:id="@+id/tvDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+
+    <!-- Another Bottom View For Left to Right -->
+
+
+
+    <!-- Top View,  Row itemView of RecyclerView -->
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:elevation="5dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <CheckBox
+            android:visibility="gone"
+            android:button="@drawable/check_box_selector"
+            android:id="@+id/chkSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/chkSelected"
+            android:id="@+id/user_image"
+            android:src="@drawable/trainer"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/user_image"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/time2x"
+                    android:id="@+id/clock"
+                    android:layout_width="13dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="12sp"
+                    android:id="@+id/tvclock"
+                    android:text="11.09AM"
+                    android:layout_toRightOf="@+id/clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorAccent"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.daimajia.swipe.SwipeLayout>
